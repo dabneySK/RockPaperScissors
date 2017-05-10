@@ -1,10 +1,7 @@
 package com.dabney;
 import java.util.Scanner;
 
-/**
- * Created by soss on 5/8/17.
- */
-public class Menu {
+class Menu {
 
     Scanner input = new Scanner(System.in);
 

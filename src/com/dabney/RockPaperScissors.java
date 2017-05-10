@@ -1,6 +1,6 @@
 package com.dabney;
 
-public class Main {
+public class RockPaperScissors {
 
     public static void main(String[] args) {
 
