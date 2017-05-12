@@ -7,6 +7,7 @@ public class RockPaperScissors {
         Menu menu = new Menu();
         menu.welcomeMessage();
         menu.displayMainMenu();
+        menu.navigateMenu(menu.getMenuChoice());
 
 	/*
 	ROCK PAPER SCISSORS

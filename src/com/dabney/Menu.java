@@ -21,31 +21,41 @@ class Menu {
         System.out.println("3) exit program");
         System.out.println("----------------------------------");
         System.out.println("WHAT WOULD YOU LIKE TO DO:");
-        navigateMenu(getMenuChoice());
-
     }
 
     private void displayError() {
-        System.out.println("You typed something you were not supposed to...");
+        System.out.println("----------------------------------");
+        System.out.println("That was not a valid choice.");
+        System.out.println("----------------------------------");
+        System.out.println();
+        System.out.println();
     }
 
     public int getMenuChoice() {
         int menuChoice = input.nextInt();
+
+        while(!(menuChoice >= 1)) {
+            displayError();
+            displayMainMenu();
+            menuChoice = input.nextInt();
+        }
         return menuChoice;
     }
 
     public void navigateMenu(int choice) {
         switch(choice) {
-            case 0:
-                //one v one vs ai
-                break;
             case 1:
-                // one v one vs player
+                System.out.println("OK, lets play 1v1 vs AI.");
                 break;
             case 2:
+                System.out.println("OK, lets play 1v1 vs a Player");
+                break;
+            case 3:
+                System.out.println("Goodbye.");
                 break;
             default:
-                System.out.println("Incorrect menu choice.");
+                displayError();
+                displayMainMenu();
         }
 
     }
