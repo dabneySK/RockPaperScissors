@@ -1,9 +1,11 @@
 package com.dabney;
+
 import java.util.Scanner;
 
 class Menu {
 
     Scanner input = new Scanner(System.in);
+    GameModes gameMode = new GameModes();
 
     public void welcomeMessage() {
         System.out.println("===================================");
@@ -34,7 +36,7 @@ class Menu {
     public int getMenuChoice() {
         int menuChoice = input.nextInt();
 
-        while(!(menuChoice >= 1)) {
+        while (!(menuChoice >= 1)) {
             displayError();
             displayMainMenu();
             menuChoice = input.nextInt();
@@ -43,7 +45,7 @@ class Menu {
     }
 
     public void navigateMenu(int choice) {
-        switch(choice) {
+        switch (choice) {
             case 1:
                 System.out.println("OK, lets play 1v1 vs AI.");
                 break;
