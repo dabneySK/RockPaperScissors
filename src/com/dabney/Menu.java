@@ -4,35 +4,32 @@ import java.util.Scanner;
 
 class Menu {
 
-    Scanner input = new Scanner(System.in);
-    GameModes gameMode = new GameModes();
+    private Scanner input = new Scanner(System.in);
+    private GameModes gameMode = new GameModes();
 
     public void welcomeMessage() {
-        System.out.println("===================================");
-        System.out.println("===================================");
+        printBars(2);
         System.out.println("ROCK || PAPER || SCISSORS");
-        System.out.println("===================================");
-        System.out.println("===================================");
+        printBars(2);
+        printNewLine(2);
     }
 
     public void displayMainMenu() {
         System.out.println("MAIN MENU");
-        System.out.println("----------------------------------");
+        printBars(1);
         System.out.println("1) play one-on-one fast match vs ai");
         System.out.println("2) play one-on-one fast match vs player");
         System.out.println("3) exit program");
-        System.out.println("----------------------------------");
+        printBars(1);
         System.out.println("WHAT WOULD YOU LIKE TO DO:");
     }
 
     private void displayError() {
-        System.out.println();
-        System.out.println();
-        System.out.println("----------------------------------");
+        printNewLine(2);
+        printBars(1);
         System.out.println("That was not a valid choice.");
-        System.out.println("----------------------------------");
-        System.out.println();
-        System.out.println();
+        printBars(1);
+        printNewLine(2);
     }
 
     public int getMenuChoice() {
@@ -56,6 +53,17 @@ class Menu {
                 displayMainMenu();
                 navigateMenu(getMenuChoice());
         }
+    }
 
+    private void printBars(int amount) {
+        for (int i = 0; i < amount; i++) {
+            System.out.println("----------------------------------");
+        }
+    }
+
+    private void printNewLine(int amount) {
+        for (int i = 0; i < amount; i++) {
+            System.out.println();
+        }
     }
 }
