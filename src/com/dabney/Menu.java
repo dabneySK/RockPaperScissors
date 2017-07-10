@@ -26,6 +26,8 @@ class Menu {
     }
 
     private void displayError() {
+        System.out.println();
+        System.out.println();
         System.out.println("----------------------------------");
         System.out.println("That was not a valid choice.");
         System.out.println("----------------------------------");
@@ -35,12 +37,6 @@ class Menu {
 
     public int getMenuChoice() {
         int menuChoice = input.nextInt();
-
-        while (!(menuChoice >= 1)) {
-            displayError();
-            displayMainMenu();
-            menuChoice = input.nextInt();
-        }
         return menuChoice;
     }
 
@@ -58,6 +54,7 @@ class Menu {
             default:
                 displayError();
                 displayMainMenu();
+                navigateMenu(getMenuChoice());
         }
 
     }
