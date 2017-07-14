@@ -1,7 +1,6 @@
 package com.dabney;
 
 class Player {
-    private String choices[] = {"Rock", "Paper", "Scissors"};
     private String choice;
     private int wins;
 
@@ -11,5 +10,13 @@ class Player {
 
     public int getWins() {
         return wins;
+    }
+
+    public void setChoice(String choice) {
+        this.choice = choice;
+    }
+
+    public void setWins(int wins) {
+        this.wins = wins;
     }
 }
