@@ -1,6 +1,5 @@
 package com.dabney;
 
-
 class Computer extends Player {
 
     private int rollRandomNumber() {
@@ -20,6 +19,4 @@ class Computer extends Player {
                 choice = null;
         }
     }
-
-
 }

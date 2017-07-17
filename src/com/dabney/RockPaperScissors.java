@@ -8,9 +8,5 @@ public class RockPaperScissors {
         menu.welcomeMessage();
         menu.displayMainMenu();
         menu.navigateMenu(menu.getMenuChoice());
-
-
-
-
     }
 }

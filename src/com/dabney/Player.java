@@ -1,6 +1,6 @@
 package com.dabney;
 
-class Player {
+abstract class Player {
     protected String choice;
     private int wins;
 
@@ -12,9 +12,7 @@ class Player {
         return wins;
     }
 
-    public void setChoice() {
-        choice = "Null!!!";
-    }
+    public abstract void setChoice();
 
     public void setWins(int wins) {
         this.wins = wins;
