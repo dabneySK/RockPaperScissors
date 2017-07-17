@@ -4,6 +4,10 @@ abstract class Player {
     protected String choice;
     private int wins;
 
+    Player() {
+        wins = 0;
+    }
+
     public String getChoice() {
         return choice;
     }
@@ -15,6 +19,6 @@ abstract class Player {
     public abstract void setChoice();
 
     public void setWins(int wins) {
-        this.wins = wins;
+        this.wins += wins;
     }
 }
