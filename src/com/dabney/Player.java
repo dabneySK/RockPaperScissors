@@ -1,7 +1,7 @@
 package com.dabney;
 
 class Player {
-    private String choice;
+    protected String choice;
     private int wins;
 
     public String getChoice() {
@@ -12,8 +12,8 @@ class Player {
         return wins;
     }
 
-    public void setChoice(String choice) {
-        this.choice = choice;
+    public void setChoice() {
+        choice = "Null!!!";
     }
 
     public void setWins(int wins) {

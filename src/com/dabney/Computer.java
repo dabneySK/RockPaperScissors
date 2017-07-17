@@ -2,24 +2,24 @@ package com.dabney;
 
 
 class Computer extends Player {
-    
+
     private int rollRandomNumber() {
         return (int) (Math.round( Math.random() * 2 ));
     }
 
     @Override
-    public String getChoice() {
-
+    public void setChoice() {
         switch(rollRandomNumber()) {
             case 0:
-                return "Rock";
+                choice = "Rock";
             case 1:
-                return "Paper";
+                choice = "Paper";
             case 2:
-                return "Scissors";
+                choice = "Scissors";
             default:
-                return null;
+                choice = null;
         }
     }
+
 
 }
