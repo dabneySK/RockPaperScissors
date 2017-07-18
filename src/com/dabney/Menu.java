@@ -4,8 +4,8 @@ import java.util.Scanner;
 
 class Menu {
 
+    private int menuChoice;
     private Scanner input = new Scanner(System.in);
-    private GameModes gameMode = new GameModes();
 
     public void welcomeMessage() {
         printBars(2);
@@ -21,7 +21,6 @@ class Menu {
         System.out.println("2) play one-on-one fast match vs player");
         System.out.println("3) exit program");
         printBars(1);
-        System.out.println("WHAT WOULD YOU LIKE TO DO:");
     }
 
     private void displayError() {
@@ -32,8 +31,12 @@ class Menu {
         printNewLine(2);
     }
 
+    public void setMenuChoice() {
+        System.out.print("Please input your choice: ");
+        menuChoice = input.nextInt();
+    }
+
     public int getMenuChoice() {
-        int menuChoice = input.nextInt();
         return menuChoice;
     }
 
@@ -51,6 +54,7 @@ class Menu {
             default:
                 displayError();
                 displayMainMenu();
+                setMenuChoice();
                 navigateMenu(getMenuChoice());
         }
     }

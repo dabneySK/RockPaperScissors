@@ -7,8 +7,8 @@ class Human extends Player {
 
     @Override
     public void setChoice() {
-        System.out.println("What is your choice?");
-        System.out.println("Rock\nPaper\nScissors");
+        System.out.println("Please input your choice?");
+        System.out.print("Rock, Paper, or Scissors: ");
         choice = input.nextLine();
     }
 }
