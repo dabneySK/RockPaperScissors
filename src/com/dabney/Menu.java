@@ -54,8 +54,7 @@ class Menu {
             default:
                 displayError();
                 displayMainMenu();
-                setMenuChoice();
-                navigateMenu(getMenuChoice());
+                break;
         }
     }
 

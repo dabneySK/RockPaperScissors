@@ -1,6 +1,16 @@
 package com.dabney;
 
 class GameModes {
-    //code here test
+    Player player1;
+    Player player2;
+    Menu gameMenu;
+
+    boolean computerPlayer;
+
+    GameModes() {
+        player1 = new Human();
+        gameMenu = new Menu();
+    }
+
 
 }
