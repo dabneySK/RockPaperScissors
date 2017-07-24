@@ -20,6 +20,7 @@ public class UserInput {
     }
 
     public String getString() {
-        return "";
+        String userInput = input.nextLine();
+        return userInput;
     }
 }
