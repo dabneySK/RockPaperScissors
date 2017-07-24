@@ -1,7 +1,5 @@
 package com.dabney;
 
-import java.util.Scanner;
-
 class Menu {
 
     private int menuChoice;
