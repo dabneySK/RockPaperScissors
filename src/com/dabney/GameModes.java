@@ -12,5 +12,7 @@ class GameModes {
         gameMenu = new Menu();
     }
 
+    // check if computer or human player
 
+    // establish a 3 round match
 }

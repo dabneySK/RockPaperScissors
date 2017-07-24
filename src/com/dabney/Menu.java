@@ -5,7 +5,11 @@ import java.util.Scanner;
 class Menu {
 
     private int menuChoice;
-    private Scanner input = new Scanner(System.in);
+    private UserInput input;
+
+    Menu() {
+        input = new UserInput();
+    }
 
     public void welcomeMessage() {
         printBars(2);
@@ -32,8 +36,7 @@ class Menu {
     }
 
     public void setMenuChoice() {
-        System.out.print("Please input your choice: ");
-        menuChoice = input.nextInt();
+        menuChoice = input.getInt();
     }
 
     public int getMenuChoice() {
