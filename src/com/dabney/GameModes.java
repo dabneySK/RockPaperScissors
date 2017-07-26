@@ -12,7 +12,24 @@ class GameModes {
         gameMenu = new Menu();
     }
 
-    // check if computer or human player
+    public void displayTitleScreen() {
+        gameMenu.welcomeMessage();
+    }
+
+    public void setSecondPlayer() {
+        gameMenu.displayMainMenu();
+        gameMenu.setMenuChoice();
+
+        switch (gameMenu.getMenuChoice()) {
+            case 1:
+                player2 = new Computer();
+                break;
+            case 2:
+                player2 = new Human();
+                break;
+        }
+
+    }
 
     // establish a 3 round match
 }

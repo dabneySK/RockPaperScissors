@@ -41,8 +41,8 @@ class Menu {
         return menuChoice;
     }
 
-    public void navigateMenu(int choice) {
-        switch (choice) {
+    public void navigateMenu() {
+        switch (menuChoice) {
             case 1:
                 System.out.println("OK, lets play 1v1 vs AI.");
                 break;
