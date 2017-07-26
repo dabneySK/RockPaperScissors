@@ -4,6 +4,7 @@ class Menu {
 
     private int menuChoice;
     private UserInput input;
+    private boolean isHumanPlayer;
 
     Menu() {
         input = new UserInput();
@@ -41,12 +42,22 @@ class Menu {
         return menuChoice;
     }
 
+    public void setIsHumanPlayer(boolean choice) {
+        isHumanPlayer = choice;
+    }
+
+    public boolean getIsHumanPlayer() {
+        return isHumanPlayer;
+    }
+
     public void navigateMenu() {
         switch (menuChoice) {
             case 1:
+                setIsHumanPlayer(false);
                 System.out.println("OK, lets play 1v1 vs AI.");
                 break;
             case 2:
+                setIsHumanPlayer(true);
                 System.out.println("OK, lets play 1v1 vs a Player");
                 break;
             case 3:

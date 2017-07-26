@@ -20,15 +20,11 @@ class GameModes {
         gameMenu.displayMainMenu();
         gameMenu.setMenuChoice();
 
-        switch (gameMenu.getMenuChoice()) {
-            case 1:
-                player2 = new Computer();
-                break;
-            case 2:
-                player2 = new Human();
-                break;
+        if(gameMenu.getIsHumanPlayer()) {
+            player2 = new Human();
+        } else {
+            player2 = new Computer();
         }
-
     }
 
     // establish a 3 round match
