@@ -35,7 +35,8 @@ class Menu {
     }
 
     public void setMenuChoice() {
-        menuChoice = input.getInt();
+        displayMainMenu();
+        menuChoice = input.getInt(1, 3);
     }
 
     public int getMenuChoice() {

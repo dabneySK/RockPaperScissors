@@ -28,8 +28,5 @@ class GameStructure {
         }
     }
 
-    public void setMenuChoice() {
-        gameMenu.displayMainMenu();
-        gameMenu.setMenuChoice();
-    }
+
 }

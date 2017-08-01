@@ -11,10 +11,17 @@ public class UserInput {
 
     public int getInt() {
         int userInput;
-        do {
-            System.out.print("Please enter a number above 0: ");
+            System.out.print("Please enter a number: ");
             userInput = input.nextInt();
-        } while(userInput <= 0);
+        return userInput;
+    }
+
+    public int getInt(int min, int max) {
+        int userInput;
+        do {
+            System.out.print("Please enter a between " + min + " and " + max + " : ");
+            userInput = input.nextInt();
+        } while(userInput < min || userInput > max );
         return userInput;
     }
 
