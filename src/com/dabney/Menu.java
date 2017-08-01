@@ -42,22 +42,13 @@ class Menu {
         return menuChoice;
     }
 
-    public void setIsHumanPlayer(boolean choice) {
-        isHumanPlayer = choice;
-    }
-
-    public boolean getIsHumanPlayer() {
-        return isHumanPlayer;
-    }
 
     public void navigateMenu() {
         switch (menuChoice) {
             case 1:
-                setIsHumanPlayer(false);
                 System.out.println("OK, lets play 1v1 vs AI.");
                 break;
             case 2:
-                setIsHumanPlayer(true);
                 System.out.println("OK, lets play 1v1 vs a Player");
                 break;
             case 3:
@@ -69,6 +60,7 @@ class Menu {
                 break;
         }
     }
+
 
     private void printBars(int amount) {
         for (int i = 0; i < amount; i++) {
