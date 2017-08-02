@@ -25,8 +25,4 @@ public class UserInput {
         return userInput;
     }
 
-    public String getString() {
-        String userInput = input.nextLine();
-        return userInput;
-    }
 }

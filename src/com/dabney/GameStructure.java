@@ -3,6 +3,7 @@ package com.dabney;
 class GameStructure {
     Player player1;
     Player player2;
+    GameLogic gameLogic;
     Menu gameMenu;
 
 
@@ -23,7 +24,8 @@ class GameStructure {
 
 
     private void setSecondPlayer() {
-        switch(gameMenu.getMenuChoice()) {
+        int menuChoice = gameMenu.getMenuChoice();
+        switch(menuChoice) {
             case 1: // is AI player
                 player2 = new Computer();
                 break;
@@ -40,6 +42,7 @@ class GameStructure {
         displayMenuAndGetChoice();
         setSecondPlayer();
         gameMenu.navigateMenu();
+
 
     }
 }
