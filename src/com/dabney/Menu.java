@@ -14,7 +14,7 @@ class Menu {
         printBars(2);
         System.out.println("ROCK || PAPER || SCISSORS");
         printBars(2);
-        printNewLine(2);
+        printNewLine(1);
     }
 
     public void displayMainMenu() {
@@ -35,7 +35,6 @@ class Menu {
     }
 
     public void setMenuChoice() {
-        displayMainMenu();
         menuChoice = input.getInt(1, 3);
     }
 

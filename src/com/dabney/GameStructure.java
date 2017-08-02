@@ -5,17 +5,24 @@ class GameStructure {
     Player player2;
     Menu gameMenu;
 
+
     GameStructure() {
         player1 = new Human();
         gameMenu = new Menu();
     }
 
-    public void displayTitleScreen() {
+
+    private void displayTitleScreen() {
         gameMenu.welcomeMessage();
     }
 
+    private void displayMenuAndGetChoice() {
+        gameMenu.displayMainMenu();
+        gameMenu.setMenuChoice();
+    }
 
-    public void setSecondPlayer() {
+
+    private void setSecondPlayer() {
         switch(gameMenu.getMenuChoice()) {
             case 1: // is AI player
                 player2 = new Computer();
@@ -28,5 +35,11 @@ class GameStructure {
         }
     }
 
+    public void startGame() {
+        displayTitleScreen();
+        displayMenuAndGetChoice();
+        setSecondPlayer();
+        gameMenu.navigateMenu();
 
+    }
 }

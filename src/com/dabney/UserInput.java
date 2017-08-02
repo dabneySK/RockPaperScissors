@@ -3,9 +3,9 @@ package com.dabney;
 import java.util.Scanner;
 
 public class UserInput {
-    private Scanner input;
+    private static Scanner input;
 
-    UserInput() {
+    static {
         input = new Scanner(System.in);
     }
 
