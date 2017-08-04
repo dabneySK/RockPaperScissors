@@ -63,6 +63,14 @@ class Menu {
         }
     }
 
+    public void displayCurrentScore(Player player1, Player player2) {
+        printNewLine(1);
+        System.out.println("Current Score:");
+        printBars(1);
+        System.out.println("Player 1 score: " + player1.getWins() +"\nPlayer 2 score: " + player2.getWins());
+        printBars(1);
+    }
+
 
     private void printBars(int amount) {
         for (int i = 0; i < amount; i++) {
