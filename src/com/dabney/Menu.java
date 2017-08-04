@@ -46,13 +46,25 @@ class Menu {
     public void navigateMenu() {
         switch (menuChoice) {
             case 1:
+                printNewLine(2);
+                printBars(2);
                 System.out.println("OK, lets play 1v1 vs AI.");
+                printBars(2);
+                printNewLine(1);
                 break;
             case 2:
+                printNewLine(2);
+                printBars(2);
                 System.out.println("OK, lets play 1v1 vs a Player");
+                printBars(2);
+                printNewLine(1);
                 break;
             case 3:
+                printNewLine(2);
+                printBars(2);
                 System.out.println("Goodbye.");
+                printBars(2);
+                printNewLine(1);
                 break;
             default:
                 displayError();
