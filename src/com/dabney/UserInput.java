@@ -1,8 +1,7 @@
 package com.dabney;
-
 import java.util.Scanner;
 
-public class UserInput {
+class UserInput {
     private static Scanner input;
 
     static {

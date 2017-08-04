@@ -46,8 +46,33 @@ class GameStructure {
         player1.setChoice();
         System.out.println();
         player2.setChoice();
+        System.out.println();
         gameLogic.findWinner(player1.getChoice(), player2.getChoice());
-        System.out.println("Player " + gameLogic.getWinner() + " wins.");
+        incrementScore(gameLogic.getWinner());
+        //System.out.println("Player " + gameLogic.getWinner() + " wins.");
 
+    }
+
+    private void incrementScore(int winner) {
+        switch(winner) {
+            case -1:
+                System.out.println("It was a tie.");
+                System.out.println("Player 1 score: " + player1.getWins() +"\nPlayer 2 score: " + player2.getWins());
+                break;
+            case 1:
+                System.out.println("Player 1 wins with " + player1.getChoice());
+                player1.setWins(1);
+                System.out.println("Player 1 score: " + player1.getWins() +"\nPlayer 2 score: " + player2.getWins());
+                break;
+            case 2:
+                System.out.println("Player 2 wins with " + player2.getChoice());
+                player2.setWins(1);
+                System.out.println("Player 1 score: " + player1.getWins() +"\nPlayer 2 score: " + player2.getWins());
+                break;
+            default:
+                break;
+
+
+        }
     }
 }
