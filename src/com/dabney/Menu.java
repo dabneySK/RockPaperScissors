@@ -4,7 +4,6 @@ class Menu {
 
     private int menuChoice;
     private UserInput input;
-    private boolean isHumanPlayer;
 
     Menu() {
         input = new UserInput();
@@ -24,14 +23,6 @@ class Menu {
         System.out.println("2) play one-on-one fast match vs player");
         System.out.println("3) exit program");
         printBars(1);
-    }
-
-    private void displayError() {
-        printNewLine(2);
-        printBars(1);
-        System.out.println("That was not a valid choice.");
-        printBars(1);
-        printNewLine(2);
     }
 
     public void setMenuChoice() {
@@ -67,8 +58,7 @@ class Menu {
                 printNewLine(1);
                 break;
             default:
-                displayError();
-                displayMainMenu();
+                System.out.println("Something went wrong...");
                 break;
         }
     }

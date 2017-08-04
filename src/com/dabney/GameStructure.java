@@ -44,6 +44,7 @@ class GameStructure {
         setSecondPlayer();
         gameMenu.navigateMenu();
         player1.setChoice();
+        System.out.println();
         player2.setChoice();
         gameLogic.findWinner(player1.getChoice(), player2.getChoice());
         System.out.println("Player " + gameLogic.getWinner() + " wins.");
