@@ -42,7 +42,8 @@ class GameStructure {
         displayMenuAndGetChoice();
         setSecondPlayer();
         gameMenu.navigateMenu();
-
+        player1.setChoice();
+        player2.setChoice();
 
     }
 }

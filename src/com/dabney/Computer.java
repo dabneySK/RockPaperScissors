@@ -11,16 +11,19 @@ class Computer extends Player {
     public void setChoice() {
 
         int computerChoice = rollRandomNumber();
-        System.out.println("GOT THIS FAR, computer random rolled is " + computerChoice);
         switch(computerChoice) {
             case 0:
                 choice = "Rock";
+                break;
             case 1:
                 choice = "Paper";
+                break;
             case 2:
                 choice = "Scissor";
+                break;
             default:
                 choice = null;
+                break;
         }
     }
 }
