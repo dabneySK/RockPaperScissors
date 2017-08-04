@@ -10,6 +10,7 @@ class GameStructure {
     GameStructure() {
         player1 = new Human();
         gameMenu = new Menu();
+        gameLogic = new GameLogic();
     }
 
 
@@ -44,6 +45,8 @@ class GameStructure {
         gameMenu.navigateMenu();
         player1.setChoice();
         player2.setChoice();
+        gameLogic.findWinner(player1.getChoice(), player2.getChoice());
+        System.out.println("Player " + gameLogic.getWinner() + " wins.");
 
     }
 }
