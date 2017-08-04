@@ -71,6 +71,18 @@ class Menu {
         printBars(1);
     }
 
+    public void displayMatchWinner(Player player1, Player player2) {
+        System.out.println("The winner of this match is");
+        System.out.println(".");
+        System.out.println(".");
+        System.out.println(".");
+        if(player1.getWins() > player2.getWins()) {
+            System.out.println("PLAYER 1 !!!");
+        } else {
+            System.out.println("PLAYER 2 !!!");
+        }
+    }
+
 
     private void printBars(int amount) {
         for (int i = 0; i < amount; i++) {

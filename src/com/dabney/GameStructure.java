@@ -44,6 +44,7 @@ class GameStructure {
         setSecondPlayer();
         gameMenu.navigateMenu();
         playRounds();
+        gameMenu.displayMatchWinner(player1, player2);
     }
 
     private void playRounds() {
