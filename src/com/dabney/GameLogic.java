@@ -41,19 +41,14 @@ class GameLogic {
     }
 
     public void incrementScore(int winner, Player player1, Player player2) {
-        System.out.printf("ROUND WINNER: ");
         switch(winner) {
-            case -1:
-                System.out.printf("It was a tie...\n");
-                break;
             case 1:
-                System.out.printf("Player 1 wins with " + player1.getChoice() + "\n");
                 player1.setWins(1);
                 break;
             case 2:
-                System.out.printf("Player 2 wins with " + player2.getChoice() + "\n");
                 player2.setWins(1);
                 break;
+            case -1:
             default:
                 break;
 

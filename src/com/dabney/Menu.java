@@ -47,6 +47,29 @@ class Menu {
         printBars(1);
     }
 
+    public void displayRoundWinner(int winner, Player player1, Player player2) {
+        System.out.printf("ROUND WINNER: ");
+        switch(winner) {
+            case -1:
+                System.out.printf("It was a tie...\n");
+                break;
+            case 1:
+                System.out.printf("Player 1 wins with " + player1.getChoice() + "\n");
+                break;
+            case 2:
+                if(player2 instanceof  Computer) {
+                    System.out.printf("Computer wins with " + player2.getChoice() + "\n");
+                } else {
+                    System.out.printf("Player 2 wins with " + player2.getChoice() + "\n");
+                }
+                break;
+            default:
+                break;
+
+
+        }
+    }
+
     public void displayMatchWinner(Player player1, Player player2) {
         System.out.println("The winner of this match is");
         System.out.println(".");
