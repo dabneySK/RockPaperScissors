@@ -41,9 +41,9 @@ class Menu {
         System.out.println("Player 1 score: " + player1.getWins());
 
         if(player2 instanceof Computer)
-            System.out.println("Computer");
+            System.out.printf("Computer");
         else
-            System.out.println("Player 2");
+            System.out.printf("Player 2");
 
         System.out.printf(" score: " + player2.getWins() + "\n");
         printBars(1);
@@ -88,7 +88,6 @@ class Menu {
             }
         }
     }
-
 
     private void printBars(int amount) {
         for (int i = 0; i < amount; i++) {

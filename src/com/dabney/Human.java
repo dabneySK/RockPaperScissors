@@ -8,7 +8,6 @@ class Human extends Player {
         input = new UserInput();
     }
 
-
     @Override
     public void setChoice() {
         int numChoice;

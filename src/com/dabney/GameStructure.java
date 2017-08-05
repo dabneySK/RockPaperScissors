@@ -53,12 +53,11 @@ class GameStructure {
             System.out.println();
             player2.setChoice();
             System.out.println();
+
             gameLogic.findWinner(player1.getChoice(), player2.getChoice());
             gameLogic.incrementScore(gameLogic.getWinner(), player1, player2);
             gameMenu.displayRoundWinner(gameLogic.getWinner(), player1, player2);
             gameMenu.displayCurrentScore(player1, player2);
         }
     }
-
-
 }
