@@ -34,40 +34,16 @@ class Menu {
     }
 
 
-    public void navigateMenu() {
-        switch (menuChoice) {
-            case 1:
-                printNewLine(2);
-                printBars(2);
-                System.out.println("OK, lets play 1v1 vs AI.");
-                printBars(2);
-                printNewLine(1);
-                break;
-            case 2:
-                printNewLine(2);
-                printBars(2);
-                System.out.println("OK, lets play 1v1 vs a Player");
-                printBars(2);
-                printNewLine(1);
-                break;
-            case 3:
-                printNewLine(2);
-                printBars(2);
-                System.out.println("Goodbye.");
-                printBars(2);
-                printNewLine(1);
-                break;
-            default:
-                System.out.println("Something went wrong...");
-                break;
-        }
-    }
-
     public void displayCurrentScore(Player player1, Player player2) {
         printNewLine(1);
         System.out.println("Current Score:");
         printBars(1);
-        System.out.println("Player 1 score: " + player1.getWins() +"\nPlayer 2 score: " + player2.getWins());
+        System.out.println("Player 1 score: " + player1.getWins());
+        if(player2 instanceof Computer) {
+            System.out.println("Computer score: " + player2.getWins());
+        } else {
+            System.out.println("Player 2 score: " + player2.getWins());
+        }
         printBars(1);
     }
 
@@ -79,7 +55,11 @@ class Menu {
         if(player1.getWins() > player2.getWins()) {
             System.out.println("PLAYER 1 !!!");
         } else {
-            System.out.println("PLAYER 2 !!!");
+            if(player2 instanceof Computer) {
+                System.out.println("THE COMPUTER!!");
+            } else {
+                System.out.println("PLAYER 2 !!!");
+            }
         }
     }
 

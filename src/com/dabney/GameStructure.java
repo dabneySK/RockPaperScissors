@@ -42,7 +42,7 @@ class GameStructure {
         displayTitleScreen();
         displayMenuAndGetChoice();
         setSecondPlayer();
-        gameMenu.navigateMenu();
+        System.out.println();
         playRounds();
         gameMenu.displayMatchWinner(player1, player2);
     }
