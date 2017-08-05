@@ -39,11 +39,13 @@ class Menu {
         System.out.println("Current Score:");
         printBars(1);
         System.out.println("Player 1 score: " + player1.getWins());
-        if(player2 instanceof Computer) {
-            System.out.println("Computer score: " + player2.getWins());
-        } else {
-            System.out.println("Player 2 score: " + player2.getWins());
-        }
+
+        if(player2 instanceof Computer)
+            System.out.println("Computer");
+        else
+            System.out.println("Player 2");
+
+        System.out.printf(" score: " + player2.getWins() + "\n");
         printBars(1);
     }
 
@@ -53,20 +55,21 @@ class Menu {
             case -1:
                 System.out.printf("It was a tie...\n");
                 break;
+
             case 1:
                 System.out.printf("Player 1 wins with " + player1.getChoice() + "\n");
                 break;
+
             case 2:
-                if(player2 instanceof  Computer) {
-                    System.out.printf("Computer wins with " + player2.getChoice() + "\n");
-                } else {
-                    System.out.printf("Player 2 wins with " + player2.getChoice() + "\n");
-                }
+                if(player2 instanceof  Computer)
+                    System.out.printf("Computer");
+                else
+                    System.out.printf("Player 2");
+                System.out.printf(" wins with: " + player2.getChoice() + "\n");
                 break;
+
             default:
                 break;
-
-
         }
     }
 
