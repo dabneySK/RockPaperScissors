@@ -18,7 +18,7 @@ class UserInput {
     public int getInt(int min, int max) {
         int userInput;
         do {
-            System.out.print("Please enter a between " + min + " and " + max + " : ");
+            System.out.print("Enter a number between " + min + " and " + max + " : ");
             userInput = input.nextInt();
         } while(userInput < min || userInput > max );
         return userInput;

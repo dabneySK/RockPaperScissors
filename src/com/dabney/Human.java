@@ -11,8 +11,8 @@ class Human extends Player {
     @Override
     public void setChoice() {
         int numChoice;
-        System.out.println("Please input the number of your choice?");
-        System.out.print("1) Rock\n2) Paper\n3) Scissors: ");
+        System.out.println("Please input your choice:");
+        System.out.println("1) Rock\n2) Paper\n3) Scissors ");
         numChoice = input.getInt(1, 3);
         switch (numChoice) {
             case 1:
