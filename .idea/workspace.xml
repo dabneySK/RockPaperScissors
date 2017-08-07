@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="25323cb1-3358-44e9-a8fd-a515d82048fe" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/dabney/GameLogic.java" afterPath="$PROJECT_DIR$/src/com/dabney/GameLogic.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/dabney/GameStructure.java" afterPath="$PROJECT_DIR$/src/com/dabney/GameStructure.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/dabney/Human.java" afterPath="$PROJECT_DIR$/src/com/dabney/Human.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/dabney/Menu.java" afterPath="$PROJECT_DIR$/src/com/dabney/Menu.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -68,21 +66,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Menu.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Menu.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/dabney/Menu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="39" column="21" lean-forward="true" selection-start-line="39" selection-start-column="21" selection-end-line="39" selection-end-column="21" />
+            <state relative-caret-position="320">
+              <caret line="56" column="46" lean-forward="false" selection-start-line="56" selection-start-column="46" selection-end-line="56" selection-end-column="46" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GameStructure.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="GameStructure.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/dabney/GameStructure.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="311">
-              <caret line="53" column="32" lean-forward="true" selection-start-line="53" selection-start-column="32" selection-end-line="53" selection-end-column="32" />
+            <state relative-caret-position="439">
+              <caret line="67" column="21" lean-forward="false" selection-start-line="67" selection-start-column="21" selection-end-line="67" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -114,10 +112,10 @@
         <option value="$PROJECT_DIR$/src/com/dabney/RockPaperScissors.java" />
         <option value="$PROJECT_DIR$/src/com/dabney/Computer.java" />
         <option value="$PROJECT_DIR$/src/com/dabney/UserInput.java" />
-        <option value="$PROJECT_DIR$/src/com/dabney/GameStructure.java" />
         <option value="$PROJECT_DIR$/src/com/dabney/GameLogic.java" />
         <option value="$PROJECT_DIR$/src/com/dabney/Human.java" />
         <option value="$PROJECT_DIR$/src/com/dabney/Menu.java" />
+        <option value="$PROJECT_DIR$/src/com/dabney/GameStructure.java" />
       </list>
     </option>
   </component>
@@ -856,14 +854,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/dabney/GameLogic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="848">
-          <caret line="53" column="5" lean-forward="false" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/dabney/Computer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
@@ -896,18 +886,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/dabney/GameStructure.java">
+    <entry file="file://$PROJECT_DIR$/src/com/dabney/GameLogic.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="53" column="32" lean-forward="true" selection-start-line="53" selection-start-column="32" selection-end-line="53" selection-end-column="32" />
+        <state relative-caret-position="848">
+          <caret line="53" column="5" lean-forward="false" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/dabney/Menu.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="39" column="21" lean-forward="true" selection-start-line="39" selection-start-column="21" selection-end-line="39" selection-end-column="21" />
+        <state relative-caret-position="320">
+          <caret line="56" column="46" lean-forward="false" selection-start-line="56" selection-start-column="46" selection-end-line="56" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/dabney/GameStructure.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="439">
+          <caret line="67" column="21" lean-forward="false" selection-start-line="67" selection-start-column="21" selection-end-line="67" selection-end-column="21" />
           <folding />
         </state>
       </provider>

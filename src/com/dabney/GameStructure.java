@@ -20,7 +20,7 @@ class GameStructure {
 
     private void displayMenuAndGetChoice() {
         gameMenu.displayMainMenu();
-        gameMenu.setMenuChoice();
+        gameMenu.setMenuChoice(1, 3);
     }
 
 
@@ -43,12 +43,19 @@ class GameStructure {
         displayMenuAndGetChoice();
         setSecondPlayer();
         System.out.println();
-        playRounds();
+        playRounds(2);
         gameMenu.displayMatchWinner(player1, player2);
     }
 
-    private void playRounds() {
-        while(player1.getWins() != 2 && player2.getWins() != 2) {
+    private void replayGame() {
+        gameMenu.displayReplayMenu();
+        gameMenu.setMenuChoice(1, 3);
+
+    }
+
+    private void playRounds(int winningScore) {
+        int rounds = 1;
+        while(player1.getWins() != winningScore && player2.getWins() != winningScore) {
             player1.setChoice();
             System.out.println();
             player2.setChoice();
@@ -56,8 +63,9 @@ class GameStructure {
 
             gameLogic.findWinner(player1.getChoice(), player2.getChoice());
             gameLogic.incrementScore(gameLogic.getWinner(), player1, player2);
-            gameMenu.displayRoundWinner(gameLogic.getWinner(), player1, player2);
+            gameMenu.displayRoundWinner(rounds, gameLogic.getWinner(), player1, player2);
             gameMenu.displayCurrentScore(player1, player2);
+            rounds++;
         }
     }
 }

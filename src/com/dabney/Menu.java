@@ -25,8 +25,13 @@ class Menu {
         printBars(1);
     }
 
-    public void setMenuChoice() {
-        menuChoice = input.getInt(1, 3);
+    public void displayReplayMenu() {
+        System.out.println("What would you like to do?");
+        System.out.println("1) Replay this match\n2) Pick a new game mode\n3) Exit Program");
+    }
+
+    public void setMenuChoice(int min, int max) {
+        menuChoice = input.getInt(min, max);
     }
 
     public int getMenuChoice() {
@@ -49,8 +54,8 @@ class Menu {
         printBars(1);
     }
 
-    public void displayRoundWinner(int winner, Player player1, Player player2) {
-        System.out.printf("ROUND WINNER: ");
+    public void displayRoundWinner(int round, int winner, Player player1, Player player2) {
+        System.out.printf("ROUND " + round + " WINNER: ");
         switch(winner) {
             case -1:
                 System.out.printf("It was a tie...\n");
