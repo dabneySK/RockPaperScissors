@@ -41,10 +41,15 @@ class GameStructure {
     public void startGame() {
         displayTitleScreen();
         displayMenuAndGetChoice();
-        setSecondPlayer();
-        System.out.println();
-        playRounds(2);
-        gameMenu.displayMatchWinner(player1, player2);
+        if(gameMenu.getMenuChoice() == 3) {
+            System.out.println("Goodbye.");
+            return;
+        } else {
+            setSecondPlayer();
+            System.out.println();
+            playRounds(2);
+            gameLogic.displayMatchWinner(player1, player2);
+        }
     }
 
     private void replayGame() {
@@ -61,8 +66,8 @@ class GameStructure {
 
             gameLogic.findWinner(player1.getChoice(), player2.getChoice());
             gameLogic.incrementScore(gameLogic.getWinner(), player1, player2);
-            gameMenu.displayRoundWinner(rounds, gameLogic.getWinner(), player1, player2);
-            gameMenu.displayCurrentScore(player1, player2);
+            gameLogic.displayRoundWinner(rounds, gameLogic.getWinner(), player1, player2);
+            gameLogic.displayCurrentScore(player1, player2);
             rounds++;
         }
     }
