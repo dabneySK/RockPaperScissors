@@ -46,7 +46,6 @@ class GameStructure {
             return;
         } else {
             setSecondPlayer();
-            System.out.println();
             playRounds(2);
             gameLogic.displayMatchWinner(player1, player2);
         }

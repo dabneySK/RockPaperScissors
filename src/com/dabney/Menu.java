@@ -13,7 +13,6 @@ class Menu {
         printBars(2);
         System.out.println("ROCK || PAPER || SCISSORS");
         printBars(2);
-        printNewLine(1);
     }
 
     public void displayMainMenu() {
@@ -44,9 +43,4 @@ class Menu {
         }
     }
 
-    private void printNewLine(int amount) {
-        for (int i = 0; i < amount; i++) {
-            System.out.println();
-        }
-    }
 }
