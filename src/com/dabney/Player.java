@@ -1,14 +1,15 @@
 package com.dabney;
 
 abstract class Player {
-    protected String choice;
+    // protected String choice;
     private int wins;
+    GameChoices choice;
 
     Player() {
         wins = 0;
     }
 
-    public String getChoice() {
+    public GameChoices getChoice() {
         return choice;
     }
 

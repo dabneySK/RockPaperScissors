@@ -63,7 +63,7 @@ class GameStructure {
             player1.setChoice();
             player2.setChoice();
 
-            gameLogic.findWinner(player1.getChoice(), player2.getChoice());
+            gameLogic.findWinner(player1, player2);
             gameLogic.incrementScore(gameLogic.getWinner(), player1, player2);
             gameLogic.displayRoundWinner(rounds, gameLogic.getWinner(), player1, player2);
             gameLogic.displayCurrentScore(player1, player2);

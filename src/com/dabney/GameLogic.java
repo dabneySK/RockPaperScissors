@@ -12,29 +12,29 @@ class GameLogic {
         return winner;
     }
 
-    public void findWinner(String player1, String player2) {
+    public void findWinner(Player player1, Player player2) {
         // if player 1 wins, return 1, if player2 wins, return 2
         // returns -1 if it was a tie
 
-        if(player1.equalsIgnoreCase(player2)) {
+        if(player1.getChoice() == player2.getChoice()) {
             setWinner(-1);
 
-        } else if(player1.equalsIgnoreCase("Rock")) {
-            if(player2.equalsIgnoreCase("Paper"))
+        } else if(player1.getChoice()== GameChoices.ROCK) {
+            if(player2.getChoice()== GameChoices.PAPER)
                 setWinner(2);
-            else if (player2.equalsIgnoreCase("Scissor"))
+            else if (player2.getChoice()== GameChoices.SCISSORS)
                 setWinner(1);
 
-        } else if(player1.equalsIgnoreCase("Paper")) {
-            if(player2.equalsIgnoreCase("Rock"))
+        } else if(player1.getChoice()== GameChoices.PAPER) {
+            if(player2.getChoice()== GameChoices.ROCK)
                 setWinner(1);
-            else if (player2.equalsIgnoreCase("Scissor"))
+            else if (player2.getChoice()== GameChoices.SCISSORS)
                 setWinner(2);
 
-        } else if(player1.equalsIgnoreCase("Scissor")) {
-            if(player2.equalsIgnoreCase("Rock"))
+        } else if(player1.getChoice()== GameChoices.SCISSORS) {
+            if(player2.getChoice()== GameChoices.ROCK)
                 setWinner(2);
-            else if (player2.equalsIgnoreCase("Paper"))
+            else if (player2.getChoice()== GameChoices.PAPER)
                 setWinner(1);
         }
     }
