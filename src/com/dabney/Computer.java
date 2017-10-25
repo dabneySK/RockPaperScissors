@@ -13,13 +13,13 @@ class Computer extends Player {
         int computerChoice = rollRandomNumber();
         switch(computerChoice) {
             case 0:
-                choice = choice.ROCK;
+                choice = GameChoices.ROCK;
                 break;
             case 1:
-                choice = choice.PAPER;
+                choice = GameChoices.PAPER;
                 break;
             case 2:
-                choice = choice.SCISSORS;
+                choice = GameChoices.SCISSORS;
                 break;
             default:
                 choice = null;

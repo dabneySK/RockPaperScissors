@@ -16,13 +16,13 @@ class Human extends Player {
         numChoice = input.getInt(1, 3);
         switch (numChoice) {
             case 1:
-                choice = choice.ROCK;
+                choice = GameChoices.ROCK;
                 break;
             case 2:
-                choice = choice.PAPER;
+                choice = GameChoices.PAPER;
                 break;
             case 3:
-                choice = choice.SCISSORS;
+                choice = GameChoices.SCISSORS;
                 break;
             default:
                 choice = null;
