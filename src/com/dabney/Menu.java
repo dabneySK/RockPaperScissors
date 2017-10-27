@@ -26,7 +26,9 @@ class Menu {
 
     public void displayReplayMenu() {
         System.out.println("What would you like to do?");
-        System.out.println("1) Replay this match\n2) Pick a new game mode\n3) Exit Program");
+        System.out.println("1) Replay this match");
+        System.out.println("2) Pick a new game mode");
+        System.out.println("3) Exit Program");
     }
 
     public void setMenuChoice(int min, int max) {
