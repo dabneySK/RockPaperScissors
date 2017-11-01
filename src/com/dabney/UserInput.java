@@ -1,4 +1,5 @@
 package com.dabney;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 class UserInput {
@@ -8,20 +9,25 @@ class UserInput {
         input = new Scanner(System.in);
     }
 
-    public int getInt() {
-        int userInput;
-            System.out.print("Please enter a number: ");
-            userInput = input.nextInt();
-        return userInput;
-    }
-
     public int getInt(int min, int max) {
         int userInput;
-        do {
-            System.out.print("Enter a number between " + min + " and " + max + " : ");
-            userInput = input.nextInt();
-        } while(userInput < min || userInput > max );
-        return userInput;
-    }
 
+
+        for(int retries = 0;; retries++) {
+            try {
+                System.out.print("Enter a number between "
+                        + min + " and " + max + " : ");
+                userInput = input.nextInt();
+                return userInput;
+            } catch (InputMismatchException e) {
+                input.nextLine();
+                if(retries < 3) {
+                    System.out.println("You entered the wrong input.");
+                    continue;
+                } else {
+                 throw e;
+                }
+            }
+        }
+    }
 }
