@@ -14,6 +14,19 @@ class GameStructure {
     }
 
 
+    public void startGame() {
+        displayTitleScreen();
+        displayMenuAndGetChoice();
+        if(gameMenu.getMenuChoice() == 3) {
+            System.out.println("Goodbye.");
+            return;
+        } else {
+            setSecondPlayer();
+            playRounds(2);
+            gameLogic.displayMatchWinner(player1, player2);
+        }
+    }
+
     private void displayTitleScreen() {
         gameMenu.welcomeMessage();
     }
@@ -38,24 +51,6 @@ class GameStructure {
         }
     }
 
-    public void startGame() {
-        displayTitleScreen();
-        displayMenuAndGetChoice();
-        if(gameMenu.getMenuChoice() == 3) {
-            System.out.println("Goodbye.");
-            return;
-        } else {
-            setSecondPlayer();
-            playRounds(2);
-            gameLogic.displayMatchWinner(player1, player2);
-        }
-    }
-
-    private void replayGame() {
-        gameMenu.displayReplayMenu();
-        gameMenu.setMenuChoice(1, 3);
-
-    }
 
     private void playRounds(int winningScore) {
         int rounds = 1;
@@ -69,5 +64,11 @@ class GameStructure {
             gameLogic.displayCurrentScore(player1, player2);
             rounds++;
         }
+    }
+
+    private void replayGame() {
+        gameMenu.displayReplayMenu();
+        gameMenu.setMenuChoice(1, 3);
+
     }
 }
